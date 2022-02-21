@@ -12,6 +12,11 @@ post = Post.create!(
   rating: 4
 )
 
+post_two = Post.create!(
+  title: 'A second, less impressive post',
+  rating: 2
+)
+
 Comment.create!(
   [
     {
@@ -19,8 +24,20 @@ Comment.create!(
       post: post
     },
     {
-      body: 'Not so great',
+      body: 'Gr8 m8',
       post: post
+    },
+    {
+      body: 'Worst one yet',
+      post: post_two
+    },
+    {
+      body: 'I want my money back',
+      post: post_two
+    },
+    {
+      body: 'You could do better',
+      post: post_two
     }
   ]
 )
