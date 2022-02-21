@@ -1,12 +1,25 @@
 # README
 
-## What I am doing
+## Quickstart
+
+```s
+$ bin/rails db:create db:migrate db:seed
+# Start the server
+$ bin/rails s
+```
+
+The GraphiQL interface will be available at `localhost:3000/graphiql`.
+
+## How this repo was created
 
 - https://graphql-ruby.org/getting_started
 
 ```s
-$ bundler add graphql
-$ bundler add graphiql-rails
+# Create a new Rails app
+$ rails new demo-graphql-server
+
+# Add the required gems
+$ bundler add graphql graphiql-rails
 
 # Setup our base GraphQL files
 $ bin/rails g graphql:install
@@ -19,8 +32,13 @@ $ bin/rails g model Comment body post:references
 $ bin/rails g graphql:object Post title:String rating:Int comments:[Comment]
 $ bin/rails g graphql:object Comment body:String post:Post
 
+# Note: at this stage we should update our `Posts` model for the `has_many` relationship.
+
 # Run migrations and seeding
 $ bin/rails db:create db:migrate db:seed
+
+# Start the server on port 3000
+$ bin/rails s
 ```
 
 - Updates Post model for `has_many`.
