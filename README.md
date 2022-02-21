@@ -1,5 +1,7 @@
 # README
 
+This is the repo that goes along with my post ["Setting Up A Base GraphQL Server And GraphiQL With Rails 7"](https://blog.dennisokeeffe.com/blog/2022-02-20-setting-up-a-base-graphql-server-and-graphiql-with-rails-7).
+
 ## Quickstart
 
 ```s
